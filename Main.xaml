@@ -1,6 +1,6 @@
-<Activity mc:Ignorable="sap sap2010" x:Class="Main" VisualBasic.Settings="{x:Null}" sap:VirtualizedContainerService.HintSize="823,3547" sap2010:WorkflowViewState.IdRef="ActivityBuilder_1" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:sc="clr-namespace:System.ComponentModel;assembly=System.ComponentModel.TypeConverter" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=System.Private.CoreLib" xmlns:si="clr-namespace:System.IO;assembly=System.Private.CoreLib" xmlns:str="clr-namespace:System.Text.RegularExpressions;assembly=System.Text.RegularExpressions" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+<Activity mc:Ignorable="sap sap2010" x:Class="Main" VisualBasic.Settings="{x:Null}" sap:VirtualizedContainerService.HintSize="823,3372" sap2010:WorkflowViewState.IdRef="ActivityBuilder_1" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:s="clr-namespace:System;assembly=System.Private.CoreLib" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:sc="clr-namespace:System.ComponentModel;assembly=System.ComponentModel.TypeConverter" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=System.Private.CoreLib" xmlns:si="clr-namespace:System.IO;assembly=System.Private.CoreLib" xmlns:str="clr-namespace:System.Text.RegularExpressions;assembly=System.Text.RegularExpressions" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
   <TextExpression.NamespacesForImplementation>
-    <scg:List x:TypeArguments="x:String" Capacity="60">
+    <scg:List x:TypeArguments="x:String" Capacity="32">
       <x:String>System.Activities</x:String>
       <x:String>System.Activities.Statements</x:String>
       <x:String>System.Activities.Expressions</x:String>
@@ -36,7 +36,7 @@
     </scg:List>
   </TextExpression.NamespacesForImplementation>
   <TextExpression.ReferencesForImplementation>
-    <scg:List x:TypeArguments="AssemblyReference" Capacity="74">
+    <scg:List x:TypeArguments="AssemblyReference" Capacity="52">
       <AssemblyReference>System.Activities</AssemblyReference>
       <AssemblyReference>Microsoft.VisualBasic</AssemblyReference>
       <AssemblyReference>mscorlib</AssemblyReference>
@@ -90,7 +90,7 @@
       <AssemblyReference>radix64</AssemblyReference>
     </scg:List>
   </TextExpression.ReferencesForImplementation>
-  <Sequence DisplayName="Main Sequence" sap:VirtualizedContainerService.HintSize="833,3482" sap2010:WorkflowViewState.IdRef="Sequence_1">
+  <Sequence DisplayName="Main Sequence" sap:VirtualizedContainerService.HintSize="833,3307" sap2010:WorkflowViewState.IdRef="Sequence_1">
     <Sequence.Variables>
       <Variable x:TypeArguments="x:Int32" Default="0" Name="activityIndex" />
     </Sequence.Variables>
@@ -99,13 +99,13 @@
         <x:Boolean x:Key="IsExpanded">True</x:Boolean>
       </scg:Dictionary>
     </sap:WorkflowViewStateService.ViewState>
-    <Sequence sap:VirtualizedContainerService.HintSize="791,3392" sap2010:WorkflowViewState.IdRef="Sequence_2">
+    <Sequence sap:VirtualizedContainerService.HintSize="791,3217" sap2010:WorkflowViewState.IdRef="Sequence_2">
       <sap:WorkflowViewStateService.ViewState>
         <scg:Dictionary x:TypeArguments="x:String, x:Object">
           <x:Boolean x:Key="IsExpanded">True</x:Boolean>
         </scg:Dictionary>
       </sap:WorkflowViewStateService.ViewState>
-      <ui:ForEachFileX DisplayName="For Each File in Folder" Folder="C:\Users\orussi\OneDrive - Auxis, LLC\Documentos\UiPath\RPAChallengeScrapeCmdLine" sap:VirtualizedContainerService.HintSize="729,3270" sap2010:WorkflowViewState.IdRef="ForEachFileX_1" IncludeSubDirectories="True" OrderBy="NameAscFirst" SkipFolderWithoutPermission="False">
+      <ui:ForEachFileX DisplayName="For Each File in Folder" Folder="C:\Users\orussi\OneDrive - Auxis, LLC\Documentos\UiPath\RPAChallengeScrapeCmdLine" sap:VirtualizedContainerService.HintSize="729,3095" sap2010:WorkflowViewState.IdRef="ForEachFileX_1" IncludeSubDirectories="True" OrderBy="NameAscFirst" SkipFolderWithoutPermission="False">
         <ui:ForEachFileX.Body>
           <ActivityAction x:TypeArguments="si:FileInfo, x:Int32">
             <ActivityAction.Argument1>
@@ -114,7 +114,7 @@
             <ActivityAction.Argument2>
               <DelegateInArgument x:TypeArguments="x:Int32" Name="CurrentIndex" />
             </ActivityAction.Argument2>
-            <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="695,3011" sap2010:WorkflowViewState.IdRef="Sequence_3">
+            <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="695,2836" sap2010:WorkflowViewState.IdRef="Sequence_3">
               <Sequence.Variables>
                 <Variable x:TypeArguments="x:String" Name="textFile" />
                 <Variable x:TypeArguments="str:MatchCollection" Name="matches" />
@@ -124,9 +124,9 @@
                   <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                 </scg:Dictionary>
               </sap:WorkflowViewStateService.ViewState>
-              <If Condition="[CurrentFile.Extension=&quot;.xaml&quot;]" sap:VirtualizedContainerService.HintSize="653,2921" sap2010:WorkflowViewState.IdRef="If_1">
+              <If Condition="[CurrentFile.Extension=&quot;.xaml&quot;]" sap:VirtualizedContainerService.HintSize="653,2746" sap2010:WorkflowViewState.IdRef="If_1">
                 <If.Then>
-                  <Sequence sap:VirtualizedContainerService.HintSize="571,2658" sap2010:WorkflowViewState.IdRef="Sequence_4">
+                  <Sequence sap:VirtualizedContainerService.HintSize="571,2483" sap2010:WorkflowViewState.IdRef="Sequence_4">
                     <sap:WorkflowViewStateService.ViewState>
                       <scg:Dictionary x:TypeArguments="x:String, x:Object">
                         <x:Boolean x:Key="IsExpanded">True</x:Boolean>
@@ -141,18 +141,23 @@
                         <InArgument x:TypeArguments="str:MatchCollection">[System.Text.RegularExpressions.Regex.Matches(textFile,"&lt;([^&lt;])+&gt;")]</InArgument>
                       </Assign.Value>
                     </Assign>
-                    <ui:ForEach x:TypeArguments="str:Match" CurrentIndex="{x:Null}" DisplayName="For Each" sap:VirtualizedContainerService.HintSize="529,2147" sap2010:WorkflowViewState.IdRef="ForEach`1_2" Values="[matches]">
+                    <ui:ForEach x:TypeArguments="str:Match" CurrentIndex="{x:Null}" DisplayName="For Each" sap:VirtualizedContainerService.HintSize="529,1972" sap2010:WorkflowViewState.IdRef="ForEach`1_2" Values="[matches]">
                       <ui:ForEach.Body>
                         <ActivityAction x:TypeArguments="str:Match">
                           <ActivityAction.Argument>
                             <DelegateInArgument x:TypeArguments="str:Match" Name="match" />
                           </ActivityAction.Argument>
-                          <Sequence DisplayName="Body" sap:VirtualizedContainerService.HintSize="493,2014" sap2010:WorkflowViewState.IdRef="Sequence_6">
+                          <Sequence DisplayName="Body" sap:VirtualizedContainerService.HintSize="493,1839" sap2010:WorkflowViewState.IdRef="Sequence_6">
                             <Sequence.Variables>
                               <Variable x:TypeArguments="x:Int32" Name="firstIndex" />
                               <Variable x:TypeArguments="str:MatchCollection" Name="subMatches" />
                               <Variable x:TypeArguments="x:Int32" Name="textFirstIndex" />
                               <Variable x:TypeArguments="x:String" Name="newMatch" />
+                              <Variable x:TypeArguments="s:String[]" Name="specialActivities">
+                                <Variable.Default>
+                                  <VisualBasicValue x:TypeArguments="s:String[]" ExpressionText="{}{&quot;Sequence&quot;,&quot;Flowchart&quot;,&quot;Delay&quot;}" />
+                                </Variable.Default>
+                              </Variable>
                             </Sequence.Variables>
                             <sap:WorkflowViewStateService.ViewState>
                               <scg:Dictionary x:TypeArguments="x:String, x:Object">
@@ -167,17 +172,34 @@
                                 <InArgument x:TypeArguments="str:MatchCollection">[System.Text.RegularExpressions.Regex.Matches(match.Value,"DisplayName=""([^""])+""")]</InArgument>
                               </Assign.Value>
                             </Assign>
-                            <ui:IfElseIf DisplayName="Else If" sap:VirtualizedContainerService.HintSize="451,1814" sap2010:WorkflowViewState.IdRef="IfElseIf_1">
+                            <ui:IfElseIf DisplayName="Else If" sap:VirtualizedContainerService.HintSize="451,1639" sap2010:WorkflowViewState.IdRef="IfElseIf_1">
                               <ui:IfElseIf.ConditionBlocks>
                                 <sc:BindingList x:TypeArguments="ui:IfElseIfBlock" AllowEdit="True" AllowNew="True" AllowRemove="True" RaiseListChangedEvents="True">
                                   <ui:IfElseIfBlock BlockType="If" Condition="[subMatches.Count&gt;0 AndAlso Not match.Value.StartsWith(&quot;&lt;Transition&quot;)]">
                                     <ui:IfElseIfBlock.Then>
-                                      <Sequence DisplayName="Body" sap:VirtualizedContainerService.HintSize="400,600" sap2010:WorkflowViewState.IdRef="Sequence_9">
+                                      <Sequence DisplayName="Body" sap:VirtualizedContainerService.HintSize="400,820" sap2010:WorkflowViewState.IdRef="Sequence_9">
+                                        <Sequence.Variables>
+                                          <Variable x:TypeArguments="str:Match" Name="innerMatch" />
+                                          <Variable x:TypeArguments="x:String" Name="activityPreviousVal" />
+                                          <Variable x:TypeArguments="s:String[]" Name="specialElements">
+                                            <Variable.Default>
+                                              <VisualBasicValue x:TypeArguments="s:String[]" ExpressionText="{}{&quot;Sequence&quot;,&quot;Flowchart&quot;,&quot;Delay&quot;}" />
+                                            </Variable.Default>
+                                          </Variable>
+                                        </Sequence.Variables>
                                         <sap:WorkflowViewStateService.ViewState>
                                           <scg:Dictionary x:TypeArguments="x:String, x:Object">
                                             <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                                           </scg:Dictionary>
                                         </sap:WorkflowViewStateService.ViewState>
+                                        <Assign sap:VirtualizedContainerService.HintSize="358,70" sap2010:WorkflowViewState.IdRef="Assign_14">
+                                          <Assign.To>
+                                            <OutArgument x:TypeArguments="str:Match">[innerMatch]</OutArgument>
+                                          </Assign.To>
+                                          <Assign.Value>
+                                            <InArgument x:TypeArguments="str:Match">[System.Text.RegularExpressions.Regex.Match(subMatches(0).Value,"DisplayName=""(Activity\-[a-zA-Z0-9\+\/]+){0,1}")]</InArgument>
+                                          </Assign.Value>
+                                        </Assign>
                                         <Assign sap:VirtualizedContainerService.HintSize="358,70" sap2010:WorkflowViewState.IdRef="Assign_2">
                                           <Assign.To>
                                             <OutArgument x:TypeArguments="x:Int32">[firstIndex]</OutArgument>
@@ -186,12 +208,20 @@
                                             <InArgument x:TypeArguments="x:Int32">[match.Value.IndexOf(subMatches(0).Value)]</InArgument>
                                           </Assign.Value>
                                         </Assign>
+                                        <Assign sap:VirtualizedContainerService.HintSize="358,70" sap2010:WorkflowViewState.IdRef="Assign_15">
+                                          <Assign.To>
+                                            <OutArgument x:TypeArguments="x:String">[activityPreviousVal]</OutArgument>
+                                          </Assign.To>
+                                          <Assign.Value>
+                                            <InArgument x:TypeArguments="x:String">[subMatches(0).Value.Substring(0,subMatches(0).Value.Length-1).Substring(innerMatch.Value.Length).TrimStart]</InArgument>
+                                          </Assign.Value>
+                                        </Assign>
                                         <Assign sap:VirtualizedContainerService.HintSize="358,70" sap2010:WorkflowViewState.IdRef="Assign_3">
                                           <Assign.To>
                                             <OutArgument x:TypeArguments="x:String">[newMatch]</OutArgument>
                                           </Assign.To>
                                           <Assign.Value>
-                                            <InArgument x:TypeArguments="x:String">[match.Value.Substring(0,firstIndex)+"DisplayName=""Activity-"+radix64.Convert.FromDecimal(activityIndex)+""""+match.Value.Substring(firstIndex+subMatches(0).Value.Length)]</InArgument>
+                                            <InArgument x:TypeArguments="x:String">[match.Value.Substring(0,firstIndex)+"DisplayName=""Activity-"+radix64.Convert.FromDecimal(activityIndex)+if(activityPreviousVal.Length&gt;0, " "+activityPreviousVal, "")+""""+match.Value.Substring(firstIndex+subMatches(0).Value.Length)]</InArgument>
                                           </Assign.Value>
                                         </Assign>
                                         <Assign sap:VirtualizedContainerService.HintSize="358,70" sap2010:WorkflowViewState.IdRef="Assign_7">
@@ -221,14 +251,25 @@
                                       </Sequence>
                                     </ui:IfElseIfBlock.Then>
                                   </ui:IfElseIfBlock>
-                                  <ui:IfElseIfBlock BlockType="ElseIf" Condition="[subMatches.Count=0 AndAlso match.Value.StartsWith(&quot;&lt;Sequence &quot;)]">
+                                  <ui:IfElseIfBlock BlockType="ElseIf" Condition="[subMatches.Count=0 AndAlso SpecialActivities.Contains(System.Text.RegularExpressions.Regex.Match(match.Value,&quot;^&lt;[a-zA-Z]+ &quot;).Value.Replace(&quot;&lt;&quot;,&quot;&quot;).Replace(&quot; &quot;,&quot;&quot;))]">
                                     <ui:IfElseIfBlock.Then>
-                                      <Sequence DisplayName="Body" sap:VirtualizedContainerService.HintSize="400,380" sap2010:WorkflowViewState.IdRef="Sequence_10">
+                                      <Sequence DisplayName="Body" sap:VirtualizedContainerService.HintSize="400,490" sap2010:WorkflowViewState.IdRef="Sequence_10">
+                                        <Sequence.Variables>
+                                          <Variable x:TypeArguments="x:String" Name="specialElement" />
+                                        </Sequence.Variables>
                                         <sap:WorkflowViewStateService.ViewState>
                                           <scg:Dictionary x:TypeArguments="x:String, x:Object">
                                             <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                                           </scg:Dictionary>
                                         </sap:WorkflowViewStateService.ViewState>
+                                        <Assign sap:VirtualizedContainerService.HintSize="358,70" sap2010:WorkflowViewState.IdRef="Assign_16">
+                                          <Assign.To>
+                                            <OutArgument x:TypeArguments="x:String">[specialElement]</OutArgument>
+                                          </Assign.To>
+                                          <Assign.Value>
+                                            <InArgument x:TypeArguments="x:String">[System.Text.RegularExpressions.Regex.Match(match.Value,"^&lt;[a-zA-Z]+ ").Value.Replace("&lt;","").Replace(" ","")]</InArgument>
+                                          </Assign.Value>
+                                        </Assign>
                                         <Assign sap:VirtualizedContainerService.HintSize="358,70" sap2010:WorkflowViewState.IdRef="Assign_10">
                                           <Assign.To>
                                             <OutArgument x:TypeArguments="x:Int32">[textFirstIndex]</OutArgument>
@@ -242,45 +283,10 @@
                                             <OutArgument x:TypeArguments="x:String">[textFile]</OutArgument>
                                           </Assign.To>
                                           <Assign.Value>
-                                            <InArgument x:TypeArguments="x:String">[textFile.Substring(0,textFirstIndex)+"&lt;Sequence DisplayName=""Activity-"+radix64.Convert.FromDecimal(activityIndex)+""""+textFile.Substring(textFirstIndex+"&lt;Sequence".Length)]</InArgument>
+                                            <InArgument x:TypeArguments="x:String">[textFile.Substring(0,textFirstIndex)+"&lt;"+specialElement+" DisplayName=""Activity-"+radix64.Convert.FromDecimal(activityIndex)+" "+specialElement+""""+textFile.Substring(textFirstIndex+specialElement.Length+1)]</InArgument>
                                           </Assign.Value>
                                         </Assign>
                                         <Assign sap:VirtualizedContainerService.HintSize="358,70" sap2010:WorkflowViewState.IdRef="Assign_8">
-                                          <Assign.To>
-                                            <OutArgument x:TypeArguments="x:Int32">[activityIndex]</OutArgument>
-                                          </Assign.To>
-                                          <Assign.Value>
-                                            <InArgument x:TypeArguments="x:Int32">[activityIndex+1]</InArgument>
-                                          </Assign.Value>
-                                        </Assign>
-                                      </Sequence>
-                                    </ui:IfElseIfBlock.Then>
-                                  </ui:IfElseIfBlock>
-                                  <ui:IfElseIfBlock BlockType="ElseIf" Condition="[subMatches.Count=0 AndAlso match.Value.StartsWith(&quot;&lt;Flowchart &quot;)]">
-                                    <ui:IfElseIfBlock.Then>
-                                      <Sequence DisplayName="Body" sap:VirtualizedContainerService.HintSize="400,380" sap2010:WorkflowViewState.IdRef="Sequence_11">
-                                        <sap:WorkflowViewStateService.ViewState>
-                                          <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                                            <x:Boolean x:Key="IsExpanded">True</x:Boolean>
-                                          </scg:Dictionary>
-                                        </sap:WorkflowViewStateService.ViewState>
-                                        <Assign sap:VirtualizedContainerService.HintSize="358,70" sap2010:WorkflowViewState.IdRef="Assign_13">
-                                          <Assign.To>
-                                            <OutArgument x:TypeArguments="x:Int32">[textFirstIndex]</OutArgument>
-                                          </Assign.To>
-                                          <Assign.Value>
-                                            <InArgument x:TypeArguments="x:Int32">[textFile.IndexOf(match.Value)]</InArgument>
-                                          </Assign.Value>
-                                        </Assign>
-                                        <Assign sap:VirtualizedContainerService.HintSize="358,70" sap2010:WorkflowViewState.IdRef="Assign_12">
-                                          <Assign.To>
-                                            <OutArgument x:TypeArguments="x:String">[textFile]</OutArgument>
-                                          </Assign.To>
-                                          <Assign.Value>
-                                            <InArgument x:TypeArguments="x:String">[textFile.Substring(0,textFirstIndex)+"&lt;Flowchart DisplayName=""Activity-"+radix64.Convert.FromDecimal(activityIndex)+""""+textFile.Substring(textFirstIndex+"&lt;Flowchart".Length)]</InArgument>
-                                          </Assign.Value>
-                                        </Assign>
-                                        <Assign sap:VirtualizedContainerService.HintSize="358,70" sap2010:WorkflowViewState.IdRef="Assign_11">
                                           <Assign.To>
                                             <OutArgument x:TypeArguments="x:Int32">[activityIndex]</OutArgument>
                                           </Assign.To>
